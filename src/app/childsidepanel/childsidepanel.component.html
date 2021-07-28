@@ -1,7 +1,7 @@
 <mat-sidenav-container class="app example-sidenav-container" autosize>
     <mat-sidenav #sidenav class="example-sidenav sidenav" mode="side" opened="true"
         [ngStyle]="{ 'width': !collapsedSidebar ? '200px':'70px' }">
-        <mat-nav-list>
+        <!-- <mat-nav-list>
             <a mat-list-item href="#">
                 <h1 class="title mt"><b>KANTAR </b><small class="success thin">Jade</small></h1>
             </a>
@@ -30,7 +30,111 @@
             <a mat-list-item href="#">
                 <h2 class="light">User Admin</h2>
             </a>
-        </mat-nav-list>
+        </mat-nav-list> -->
+    <mat-list>
+        <mat-list-item>
+            <h1 class="title mt"><b>KANTAR </b><small class="success thin">Jade</small></h1>
+        </mat-list-item>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">      
+         <h2 class="light">Panel</h2>
+        </mat-list-item>
+        <div class="submenu" [ngClass]="{'expanded':showSubmenu}" *ngIf="isShowing || isExpanded">
+            <a mat-list-item href="#">
+                <h3 class="light">Demographics</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Validations</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Data Automation</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Awards</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Redemptions</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Recruitment</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Collection Types</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Rearch Types</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">Return Rates</h3>
+            </a>
+            <a mat-list-item href="#">
+                <h3 class="light">SETL Processing</h3>
+            </a>
+        </div>
+        <mat-list-item (click)="showSubmenu1 = !showSubmenu1" class="parent">      
+            <h2 class="light">Panelists</h2>
+           </mat-list-item>
+           <div class="submenu" [ngClass]="{'expanded1':showSubmenu1}" *ngIf="isShowing1 || isExpanded1">
+               <a mat-list-item href="#">
+                   <h3 class="light">Search</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Import</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Specifications</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Adhoc Points</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Marking</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">IP Checker</h3>
+               </a>
+           </div>
+           <mat-list-item (click)="showSubmenu2 = !showSubmenu2" class="parent">      
+            <h2 class="light">Studies</h2>
+           </mat-list-item>
+           <div class="submenu" [ngClass]="{'expanded2':showSubmenu2}" *ngIf="isShowing2 || isExpanded2">
+               <a mat-list-item href="#">
+                   <h3 class="light">Clients</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Studies Details</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Categories</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Study Categories</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Query Strings</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Satisfaction Svys</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Study Import/Export</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Batch Management</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">Field Report</h3>
+               </a>
+               <a mat-list-item href="#">
+                   <h3 class="light">WayPoints</h3>
+               </a>
+           </div>
+        <mat-list-item>
+            <h2 class="light">Samples</h2>
+        </mat-list-item>
+        <mat-list-item>
+            <h2 class="light">User Admin</h2>
+        </mat-list-item>
+    </mat-list>
     </mat-sidenav>
     <mat-sidenav #sidenav class="example-sidenav sidenav">
         <button mat-icon-button (click)="collapsedSidebar = !collapsedSidebar">

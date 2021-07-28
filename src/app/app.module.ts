@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChildsidepanelComponent } from './childsidepanel/childsidepanel.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,8 @@ import { ChildsidepanelComponent } from './childsidepanel/childsidepanel.compone
     MatListModule,
     MatSidenavModule,
     LayoutModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

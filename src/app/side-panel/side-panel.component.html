@@ -1,0 +1,47 @@
+    <mat-sidenav-container class="example-container">
+   
+           <mat-sidenav #sidenav mode="side" opened>
+               <mat-nav-list>
+                   <a mat-list-item (click)="hide()">
+                       <img src="../../assets/images/kantar-icon.svg" width="30" height="30" alt="mani">                                            
+                   </a>
+                   <a mat-list-item href="#">
+                       <img src="https://img.icons8.com/ios-filled/30/000000/search--v4.png" alt="mani"/>
+                   </a>                   
+               </mat-nav-list>
+           
+           </mat-sidenav>
+   
+           <mat-sidenav-content>
+              <div *ngIf="show"> 
+              <router-outlet></router-outlet></div>
+            </mat-sidenav-content>
+
+        </mat-sidenav-container>
+
+
+        <!-- <mat-sidenav-container class="app example-sidenav-container" autosize>
+            <mat-sidenav #sidenav class="example-sidenav sidenav" mode="side" opened="true"
+              [ngStyle]="{ 'width': !collapsedSidebar ? '75px':'75px' }">
+              <mat-nav-list>
+                <a mat-list-item href="#">
+              <button mat-icon-button (click)="collapsedSidebar = !collapsedSidebar">
+                <img src="../../assets/images/kantar-icon.svg" width="30" height="30" alt="mani">                                            
+                  
+             </button>
+             </a>
+             </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav #sidenav class="example-sidenav sidenav">
+              <button mat-icon-button (click)="collapsedSidebar = !collapsedSidebar">
+                <mat-icon>menu</mat-icon>
+             </button>
+            </mat-sidenav>
+          
+            <div fxFlex class="example-sidenav-content">
+              <router-outlet></router-outlet>
+            </div>
+          </mat-sidenav-container>
+
+       -->
+        

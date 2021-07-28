@@ -1,0 +1,48 @@
+<mat-sidenav-container class="app example-sidenav-container" autosize>
+    <mat-sidenav #sidenav class="example-sidenav sidenav" mode="side" opened="true"
+        [ngStyle]="{ 'width': !collapsedSidebar ? '200px':'70px' }">
+        <mat-nav-list>
+            <a mat-list-item href="#">
+                <h1 class="title mt"><b>KANTAR </b><small class="success thin">Jade</small></h1>
+            </a>
+        </mat-nav-list>
+         <mat-nav-list>
+            <a mat-list-item href="#">
+                <h2 class="light">Panel</h2>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item href="#">
+                <h2 class="light">Panelists</h2>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item href="#">
+                <h2 class="light">Studies</h2>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item href="#">
+                <h2 class="light">Samples</h2>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item href="#">
+                <h2 class="light">User Admin</h2>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav #sidenav class="example-sidenav sidenav">
+        <button mat-icon-button (click)="collapsedSidebar = !collapsedSidebar">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-sidenav>
+
+    <div fxFlex class="example-sidenav-content">
+        <div class="m-auto">
+                  <!-- <img src="img/coming_soon.svg" alt="" clas="img-responsive">  -->
+                  <span> <h1 class="title mt"><b class="ft-70">KANTAR </b><small class="success thin">Jade</small></h1>
+                  </span>
+        </div>
+    </div>
+</mat-sidenav-container>

@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { ChildActivationEnd, RouterModule, Routes } from '@angular/router';
 import { ChildsidepanelComponent } from './childsidepanel/childsidepanel.component';
+import { LoginComponent } from './login/login.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
 
 const routes: Routes = [
+  { path: '',component: LoginComponent},
   {
-    path: '',
+    path: 'Dashboard',
     component: SidePanelComponent,
     children: [ 
       {

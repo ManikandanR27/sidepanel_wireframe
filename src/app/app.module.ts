@@ -13,11 +13,13 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChildsidepanelComponent } from './childsidepanel/childsidepanel.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidePanelComponent,
-    ChildsidepanelComponent
+    ChildsidepanelComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

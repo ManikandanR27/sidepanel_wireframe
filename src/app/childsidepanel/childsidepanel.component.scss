@@ -24,7 +24,9 @@
   opacity: 0.9;
 }
 .example-fill-remaining-space { flex: 1 1 auto; }
-
+.mat-body p, .mat-body-1 p, .mat-typography p {
+  margin: -27px 100px 0px !important;
+}
 .mt {
     margin-top: 5%;
 }
@@ -139,10 +141,19 @@
 }
 .submenu.expanded {
   height: 490px;
+  position: relative;
+  left: 15px;
 }
 .submenu.expanded1 {
   height: 280px;
+  position: relative;
+  left: 15px;
 }
 .submenu.expanded2 {
   height: 490px;
+  position: relative;
+  left: 15px;
+}
+.d-inline {
+  display: inline-flex;
 }

@@ -26,13 +26,19 @@ export class ChildsidepanelComponent implements OnInit {
   }
 mouseenter() {
   if(this.isExpanded) {
-    this.isShowing = true;
+    this.isShowing = true;    
+    this.isShowing2 = false;    
+    this.isShowing1 = false;
   }
-  else if (this.isExpanded1) {
+ if (this.isExpanded1) {
     this.isShowing1 = true;
+    this.isShowing2 = false;    
+    this.isShowing = false;
   }
-  else if (this.isExpanded2) {
-    this.isShowing2 = true;
+ if (this.isExpanded2) {
+    this.isShowing2 = true;    
+    this.isShowing = false;
+    this.isShowing1 = false;
   }
 
 
@@ -40,12 +46,18 @@ mouseenter() {
 mouseleave() {
   if(!this.isExpanded) {
     this.isShowing = false;
+    this.isShowing1 = true;
+    this.isShowing2 = true;
   }
-  else if (!this.isExpanded1) {
+   if (!this.isExpanded1) {
     this.isShowing1 = false;
+    this.isShowing = true;
+    this.isShowing2 = true;
   }
-  else if (!this.isExpanded2) {
+   if (!this.isExpanded2) {
     this.isShowing2 = false;
+    this.isShowing1 = true;
+    this.isShowing = true;
   }
 }
 }
